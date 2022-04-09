@@ -38,8 +38,11 @@ server = app.server
 ## Enable Whitenoise for serving static files from Heroku (the /static folder is seen as root by Heroku)
 server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/') 
 
-## read data
+
+## read data from github
 #df_country = pd.read_csv("https://raw.githubusercontent.com/smbillah/ist526/main/gapminder.csv")
+
+## read data from static
 df_country = pd.read_csv("static/gapminder.csv")
 
 ## creating layout
@@ -123,7 +126,7 @@ def update_figure(selected_year):
 ## uncomment the following line to run in Google Colab
 #app.run_server(mode='inline', port=8030)
 
-# uncomment the following 2 lines to run locally in a Browser via command line/terminal
+## uncomment the following 2 lines to run locally in a Browser via command line/terminal
 #if __name__ == '__main__':
 #  app.run_server(debug=True, host='127.0.0.1', port=8000)
 
