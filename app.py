@@ -40,10 +40,10 @@ server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
 
 
 ## read data from github
-#df_country = pd.read_csv("https://raw.githubusercontent.com/smbillah/ist526/main/gapminder.csv")
+df_country = pd.read_csv("https://raw.githubusercontent.com/smbillah/ist526/main/gapminder.csv")
 
 ## read data from static
-df_country = pd.read_csv("static/gapminder.csv")
+#df_country = pd.read_csv("static/gapminder.csv")
 
 ## creating layout
 app.layout = html.Div([
